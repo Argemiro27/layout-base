@@ -1,15 +1,17 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from './components/Layout';
 
 function App() {
   return (
     <div className="App">
-      <aside className="sidemenu">
-        <h1>Aside</h1>
-      </aside>
-      <section className='chatgpt'>
-
-      </section>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+        </Route>
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
